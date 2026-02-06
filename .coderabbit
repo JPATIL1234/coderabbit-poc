@@ -1,0 +1,16 @@
+language: "en"
+
+reviews:
+  profile: "chill"   # chill | strict | nitpicky
+  high_level_summary: true
+  request_changes_workflow: false
+
+path_filters:
+  include:
+    - "**/*.cs"
+  exclude:
+    - "**/bin/**"
+    - "**/obj/**"
+
+chat:
+  auto_reply: true
