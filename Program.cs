@@ -33,6 +33,20 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast");
 
+app.MapGet("/users", () =>
+{
+    List<string> data = new List<string>();
+    data.Add("A");
+    data.Add("B");
+
+    if (data.Count > 0)
+    {
+        return Results.Ok(data);
+    }
+
+    return Results.Ok();
+});
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
